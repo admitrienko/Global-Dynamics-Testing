@@ -70,10 +70,10 @@ if __name__== "__main__":
 
     n_iters = 10
 
-    #n_time_pts_list = [10, 50, 100, 500, 1000, 2000, 3000];
-    #n_dim_state_list = [2, 4, 6, 8, 10];
-    n_time_pts_list = [10, 50];
-    n_dim_state_list = [2, 4];
+    n_time_pts_list = [500, 1000, 2000, 3000];
+    n_dim_state_list = [2, 4, 6, 8, 10];
+    #n_time_pts_list = [10, 50];
+    #n_dim_state_list = [2, 4];
 
     n_time_pts_len = len(n_time_pts_list)
     n_dim_state_len = len(n_dim_state_list)
