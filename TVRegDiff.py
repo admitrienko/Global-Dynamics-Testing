@@ -14,8 +14,6 @@ import scipy as sp
 import matplotlib.pyplot as plt
 import scipy.integrate as integrate
 
-    
-    
 def diff(vector):
     return list([ x-y for (x,y) in zip(vector[1:],vector[:-1]) ])
     
@@ -77,7 +75,7 @@ def TVRegDiff( data, iter1, alph, u0 = 0, scale = 'large', ep = 1e-6, dx = 0, pl
     u = u0
     ATd = AT @ data 
 
-        #Main loop.
+    #Main loop.
         
     gradient_matrix = []
     cost_matrix = []
@@ -108,35 +106,17 @@ def TVRegDiff( data, iter1, alph, u0 = 0, scale = 'large', ep = 1e-6, dx = 0, pl
         c = c.T
 
         B = alph * L + spdiags(list(reversed(c)) , 0, n, n )    
-            
-        #R = linalg.cholesky(B)
+
 
         tol = 1.0e-4;
         maxit = 100;
-        
-            
-        
-        #print(ii)
-        
-        
+       
         if diagflag:
                 
            s = sp.sparse.linalg.cg((alph * L + AT @ A), b = (-g).T, M = B,  tol = tol, maxiter = maxit) 
            gradient_matrix.append(np.linalg.norm(g))
             
         u = u + s[0];
-        
-        
-        #Ru = sum(np.square(u))
-        #Ru = sum(np.square(diff(u)))
-        
-        #Au = np.cumsum(u)
-         
-        #DF = sum(np.square(Au-data))
-        
-        #cost = alph * Ru + DF
-        
-        #cost_matrix.append(cost)
 
     return u
 
