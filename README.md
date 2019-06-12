@@ -1,4 +1,4 @@
-# rand_tensor
+# Investigating Global Dynamics in C. Elegans
 
 The goal of this project is to investigate the global brain dynamics proposed by Kato et. al in [Global Brain Dynamics Embed the Motor
 Command Sequence of C. elegans](https://www.sciencedirect.com/science/article/pii/S0092867415011964?via%3Dihub). 
