@@ -9,5 +9,6 @@ The presented methods develop a "neural population control" which we can use to 
 
 The code for the TME (tensor maximum entropy) method, which generates a maximum-entropy distribution with specified marginal means and covariances, can be found [here](https://github.com/gamaleldin/rand_tensor).
 
+We are investigating fitting a linear dynamical system model (Markov Chain with continuous latent variables) to the neural data, and using a Kalman Filter to recover the underlying latent variables.
 
 
